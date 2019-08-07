@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-
 import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
@@ -10,26 +9,35 @@ class Main extends React.Component {
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
 
     return (
+
       <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
 
         <article id="intro" className={`${this.props.article === 'skills' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Skills</h2>
+         
           <div>
-<section className="hal">
-<ul className="small_li_list">
+<section className="">
+<h2 className="major">Skills</h2>
+<ul className="cols2 small">
 <li>HTML / CSS</li>
-<li>Javascript</li>
+<li>Javascript / jQuery</li>
 <li>Adobe Creative Suite</li>
 <li>Wordpress / PHP</li>
 <li>Copywriting</li>
+<li>Google Console / Analytics</li>
+<li>Facebook Power Editor</li>
+<li>GIT / GitHub</li>
 </ul>
 </section>
-<hr></hr>
-<section className="haf">
+
+<section className="">
 <h2 className="major">Learning</h2>
-<ul>
+<ul className="cols2 small">
 <li>React / JSX</li>
 <li>Gatsby</li>
+<li>MongoDB</li>
+<li>Express</li>
+<li>Node</li>
+
 </ul>
 </section>
 </div>
@@ -43,10 +51,10 @@ class Main extends React.Component {
 <section>
 <div className="half">
 <strong>The Sun / News UK</strong>
-<small>2006-2019</small>
+<small className="">2006-2019</small>
 </div>
 <p className="half">
-<small>Reference:</small>
+<small><b><i>Contact for Reference:</i></b></small>
 <small><a href="mailto:david.ross@thesun.co.uk">David Ross</a> (Head of Video)</small>
 </p>
 
@@ -68,18 +76,20 @@ class Main extends React.Component {
 
 
 <h2 className="major">Recent Projects</h2>
-<ul className="cols2 small">
-<li><a href="https://www.phuketcleanse.com" target="_blank">Phuket Cleanse</a><small className="col-light">Branding / Website</small></li>
-<li><a href="https://www.ladsholidayguide.com" target="_blank">Lads Holiday Guide</a><small className="col-light">Editor / Facebook</small></li>
+<ul className="cols3 small nobullets">
+<li><a href="https://www.phuketcleanse.com" target="_blank" rel="noopener noreferrer"><b>Phuket Cleanse</b></a><small className="">Branding / Website</small></li>
+<li><a href="https://www.ladsholidayguide.com" target="_blank" rel="noopener noreferrer"><b>Lads Holiday Guide</b></a><small className="">Creator / Editor</small></li>
 </ul>
 
 <h2 className="major">Current Projects</h2>
 
-<ol className="cols3 small">
-<li><a href="https://www.nanaretreats.com/" target="_blank">NanaRetreats</a></li>
-<li><a href="https://www.inspiredcapitalinvestments.com" target="_blank">Inspired Investments</a></li>
-<li><a href="https://www.ladsholidayguide.com" target="_blank">Phuket Clenase</a></li>
-</ol>
+<ul className="cols3 small nobullets">
+<li><a href="https://www.nanaretreats.com/" target="_blank" rel="noopener noreferrer"><b>NanaRetreats</b></a><small className="">Design / Strategy</small></li>
+<li><a href="https://www.inspiredcapitalinvestments.com" target="_blank" rel="noopener noreferrer"><b>Inspired Investments</b></a>
+<small className="">Web Design / SEO</small></li>
+<li><a href="https://www.phuketcleanse.com" target="_blank" rel="noopener noreferrer"><b>Phuket Cleanse</b></a>
+<small className="">Digital Marketing</small></li>
+</ul>
 
 </div>
           {close}
@@ -94,7 +104,7 @@ class Main extends React.Component {
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <form method="post" action="#">
+          <form method="post" netlify-honeypot="bot-field" data-netlify="true" action="/pages/success">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -107,17 +117,19 @@ class Main extends React.Component {
               <label htmlFor="message">Message</label>
               <textarea name="message" id="message" rows="4"></textarea>
             </div>
-            <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
+            <ul className="actions half">
+              <li><input type="submit" value="Send Message" className="" /></li>
             </ul>
-          </form>
-          <ul className="icons">
-            <li><a href="https://www.twitter.com/Lee_Walpole/" className="icon fa-twitter" target="_blank"><span className="label">Twitter</span></a></li>
-            <li><a href="https://www.facebook.com/LeeWalpole/" className="icon fa-facebook" target="_blank"><span className="label">Facebook</span></a></li>
-            <li><a href="https://www.instagram.com/LeeWalpole/" className="icon fa-instagram" target="_blank"><span className="label">Instagram</span></a></li>
-            <li><a href="https://www.linkedin.com/in/leewalpole/" className="icon fa-linkedin" target="_blank"><span className="label">LinkedIn</span></a></li>
+
+            <ul className="icons half actions">
+            <li><a href="https://www.twitter.com/Lee_Walpole/" className="icon fa-twitter" target="_blank" rel="noopener noreferrer"><span className="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/LeeWalpole/" className="icon fa-facebook" target="_blank" rel="noopener noreferrer"><span className="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/LeeWalpole/" className="icon fa-instagram" target="_blank" rel="noopener noreferrer"><span className="label">Instagram</span></a></li>
+            <li><a href="https://www.linkedin.com/in/leewalpole/" className="icon fa-linkedin" target="_blank" rel="noopener noreferrer"><span className="label">LinkedIn</span></a></li>
           </ul>
+          <input type="hidden" name="bot-field" />
+          </form>
+
           {close}
         </article>
 
