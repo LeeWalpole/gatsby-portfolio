@@ -152,4 +152,11 @@ small { display:block; font-size:90%;}
 
 @include breakpoint(small) {
 	.half { width:100%; float:left;}
+	.particles { display:none;}
+	.cols2,	.cols3 {
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+	  }
+
 }

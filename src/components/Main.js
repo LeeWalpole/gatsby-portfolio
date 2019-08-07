@@ -104,7 +104,8 @@ class Main extends React.Component {
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <form method="post" netlify-honeypot="bot-field" data-netlify="true" action="/pages/success">
+          <form name="Contact Form" method="POST" data-netlify="true" action="/contacted" >
+          <input type="hidden" name="form-name" value="Contact Form" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -127,7 +128,7 @@ class Main extends React.Component {
             <li><a href="https://www.instagram.com/LeeWalpole/" className="icon fa-instagram" target="_blank" rel="noopener noreferrer"><span className="label">Instagram</span></a></li>
             <li><a href="https://www.linkedin.com/in/leewalpole/" className="icon fa-linkedin" target="_blank" rel="noopener noreferrer"><span className="label">LinkedIn</span></a></li>
           </ul>
-          <input type="hidden" name="bot-field" />
+     
           </form>
 
           {close}
