@@ -109,3 +109,28 @@
 			}
 		}
 	}
+
+
+.half { width:50%; float:left;}
+small { display:block; font-size:90%;}
+
+.small { font-size:90%;}
+
+.col-light { color:#d1d2d3;}
+
+
+.cols2 {
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+  }
+
+  .cols3 {
+	columns: 3;
+	-webkit-columns: 3;
+	-moz-columns: 3;
+  }
+
+@include breakpoint(small) {
+	.half { width:100%; float:left;}
+}
