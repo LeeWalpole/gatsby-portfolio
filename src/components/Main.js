@@ -88,7 +88,9 @@ class Main extends React.Component {
 <li><a href="https://www.inspiredcapitalinvestments.com" target="_blank" rel="noopener noreferrer"><b>Inspired Investments</b></a>
 <small className="">Web Design / SEO</small></li>
 <li><a href="https://www.phuketcleanse.com" target="_blank" rel="noopener noreferrer"><b>Phuket Cleanse</b></a>
-<small className="">Digital Marketing</small></li>
+<small className="">SEO / Digital Marketing</small></li>
+<li><a href="javascript:void(0);"><b>Serene Cosmetic</b></a>
+<small className="">SEO / Digital Marketing</small></li>
 </ul>
 
 </div>
