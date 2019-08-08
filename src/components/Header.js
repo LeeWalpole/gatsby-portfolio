@@ -6,12 +6,12 @@ const Header = (props) => (
 
         <div className="logo">
             <span className="icon">
-            <span className="image main"><img src={picLogo} alt="" /></span>
+            <span className="image main"><img src={picLogo} alt="Lee Walpole | LW Logo" /></span>
             </span>
         </div>
         <div className="content">
             <div className="inner">
-                <h1>Web Design, Digital Marketing & SEO</h1>
+                <h1>Web Designer / SEO</h1>
                 <p>Copywriter / coder who loves flirting with Google and building beautiful, blazingly fast websites.</p>
             </div>
         </div>

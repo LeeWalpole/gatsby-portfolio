@@ -1,33 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import picLogo from '../images/lw-white.png'
-const Header = (props) => (
-    <header id="header" style={props.timeout ? {display: 'none'} : {}}>
 
-        <div className="logo">
-            <span className="icon">
-            <span className="image main"><img src={picLogo} alt="" /></span>
-            </span>
-        </div>
-        <div className="content">
-            <div className="inner">
-                <h1>Thanks</h1>
-                <p>Copywriter / coder who loves flirting with Google and building beautiful, blazingly fast websites.</p>
-            </div>
-        </div>
-        <nav>
-            <ul className="navLinks">
-                <li className="noborder"><a href="javascript:;" onClick={() => {props.onOpenArticle('skills')}}>Skills</a></li>
-                <li className="noborder"><a href="javascript:;" onClick={() => {props.onOpenArticle('experience')}}>Experience</a></li>
-                <li className="noborder"><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-)
+class Main extends React.Component {
+  render() {
 
-Header.propTypes = {
-    onOpenArticle: PropTypes.func,
-    timeout: PropTypes.bool
+    return (
+
+      <div id="main">
+
+        <article id="contacted" className="mid_center">
+        <h2>Thanks!</h2>
+         <p>I'll be in touch</p>
+        </article>
+
+      </div>
+    )
+  }
 }
 
-export default Header
+
+export default Main
